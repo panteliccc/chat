@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+}
+:root{
+  --background: hsl(87, 25%, 64%);
+  --side-bar:hsl(159, 24%, 31%);
+  --header:hsl(141, 16%, 45%);
+  --input:hsl(57, 58%, 81%);
+  --white:hsl(67, 100%, 95%);
+  --elemnt-hover:hsl(160, 12%, 20%);
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background:transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--header); 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--header); 
+}
+html {
+  font-family: 'Roboto',sans-serif;
+  background-color: var(--background);
+}
+.app {
+  display: flex;
+  align-items: flex-start;
+}
+.side-bar {
+  background-color: var(--side-bar);
+  overflow-y:auto;
+  width: 400px;
+  height: 96vh;
+  padding: 2vh 0;
+  color: var(--white);
+}
+.side-bar h1{
+  margin: 0 10px;
+}
+.line{ 
+  background-color: var(--white);
+  width: 100%;
+  height: 1px;
+ margin-top: 2vh;
+}
+
+.element {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--white);
+  gap: 20px;
+  padding: 2vh;
+  cursor: pointer;
+}
+.element .avatar {
+  width: 70px;
+  border-radius: 50%;
+}
+.element .username {
+  font-size: 20px;
+}
+
+.element:hover{
+  background-color: var(--elemnt-hover);
+  transition: all .3s;
+}
+
+
+.header {
+  background-color: var(--header);
+  width: 100%;  height: 4vh;
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header .avatar {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.header .ChatmateName{ 
+  font-size: 30px;
+  color: var(--white);
+}
