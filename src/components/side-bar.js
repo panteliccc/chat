@@ -15,19 +15,19 @@ function SideBar(){
                 </li>
                 <li className='element'>
                     <img className='avatar' src={avatar} />
-                    <span className='username'>Fica</span>
+                    <span className='username'>Mika</span>
                 </li>
                 <li className='element'>
                     <img className='avatar' src={avatar} />
-                    <span className='username'>Fica</span>
+                    <span className='username'>Laki</span>
                 </li>
                 <li className='element'>
                     <img className='avatar' src={avatar} />
-                    <span className='username'>Fica</span>
+                    <span className='username'>Tasa</span>
                 </li>
                 <li className='element'>
                     <img className='avatar' src={avatar} />
-                    <span className='username'>Fica</span>
+                    <span className='username'>Stefa</span>
                 </li>
             </ul>
         </div>

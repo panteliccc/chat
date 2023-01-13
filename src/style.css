@@ -59,7 +59,7 @@ html {
   padding: 2vh;
   cursor: pointer;
 }
-.element .avatar {
+ .avatar {
   width: 70px;
   border-radius: 50%;
 }
@@ -72,10 +72,15 @@ html {
   transition: all .3s;
 }
 
-
+.col {
+  width: 100%; height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .header {
-  background-color: var(--header);
-  width: 100%;  height: 4vh;
+  background-color: var(--header);  
+  height: 4vh;
   padding: 2vh;
   display: flex;
   align-items: center;
@@ -89,4 +94,148 @@ html {
 .header .ChatmateName{ 
   font-size: 30px;
   color: var(--white);
+}
+
+.chat {
+  display: flex;
+  width: 94%;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  padding:3vh 3% ;
+  margin: auto;
+  gap: 20px;  height: 86vh;
+}
+.messages {
+  width: 94%;
+  height: 90%;
+  overflow-y:auto;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 3%;
+  gap: 10px;
+}
+
+.chat form {
+  width: 98%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  gap: 20px;
+}
+.chat form input {
+  width: 92%;
+  outline: 0;
+  border: 0;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 2px 1%;
+}
+.chat form button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  width: 3%;
+}
+.messages .message{
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  color: white;
+}
+.messages .message span {
+  background-color: var(--elemnt-hover);
+  border-radius: 50px;  border-bottom-right-radius:0 ;
+  padding: 20px;
+  max-width: 450px;
+}
+.messages .message .avatar {
+  width: 50px;
+}
+.message.your-message {
+  align-self: flex-start;
+  flex-direction: row-reverse;
+
+}
+.message.my-message {
+  align-self: flex-end;  
+}.message.your-message span{
+  border-radius: 50px;  border-bottom-left-radius:0 ;
+}
+
+.login,.register {
+  background-color: var(--white);
+  position: absolute;
+  top: 50%;left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 100px  rgba(0, 0, 0, 0.315);
+}
+.login .heading ,.register .heading{
+  font-size: 200%;
+  font-weight: 700;
+}
+.login form ,.register form{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 20px;
+}
+.login form input ,.register form input{
+  font-size: 20px;
+  padding: 10px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  border-bottom: 1px solid var(--elemnt-hover);
+}
+.login form input::placeholder,.register form input::placeholder {
+  color: var(--elemnt-hover);
+}
+.login form button, .register form button {
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid var(--elemnt-hover);
+  background-color:var(--side-bar);
+  color: white;
+  outline: 0;
+  cursor: pointer;
+}
+.register label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.login .link-register , .link-login{
+  text-decoration: underline;
+  cursor: pointer;
+  color: black;
+}
+@media screen and (max-width:984px) {
+  .side-bar {
+    width: 300px;
+  }
+  .side-bar .avatar {
+    width: 50px;
+  }
+  .side-bar .username {
+    font-size: 17px;
+  }
+  .chat form input {
+    width: 80%;
+  }
+  .chat form button img {
+    width: 40px;
+  }
+  .messages .message span {
+    max-width: 300px;
+    font-size: 15px;
+  }
 }
